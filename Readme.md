@@ -23,6 +23,13 @@
   [ ] Add sliding obstacles (doors)
   [ ] Add one-way walls
   [ ] Add teleporters
+  [ ] Add a hole
+  [ ] Add an outside path (get out of the board on some tricky place that brings you back to another unreachable place)
+  [ ] Add a moving platform
+  [ ] Add a seesaw
+  [ ] Add a catapult
+  [ ] Add a fan
+  [ ] Add a ramp
 [ ] Add foes
   [ ] Chasing foes
   [ ] Random moving foes
