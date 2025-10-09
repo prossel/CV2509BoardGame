@@ -12,12 +12,12 @@
   [ ] game over
   [ ] score
   [ ] power-up
-[ ] Detect ball loss
-[ ] Add levels
-[ ] Add bumpers
-[ ] Add colors and textures
+[x] Detect ball loss
+[x] Add levels
+[x] Add bumpers
+[x] Add colors and textures
 [ ] Add more obstacles
-  [ ] Add walls
+  [x] Add walls
   [ ] Add moving obstacles
   [ ] Add rotating obstacles
   [ ] Add sliding obstacles (doors)
@@ -27,14 +27,14 @@
   [ ] Add an outside path (get out of the board on some tricky place that brings you back to another unreachable place)
   [ ] Add a moving platform
   [ ] Add a seesaw
-  [ ] Add a catapult
+  [x] Add a catapult
   [ ] Add a fan
   [ ] Add a ramp
 [ ] Add foes
   [ ] Chasing foes
   [ ] Random moving foes
   [ ] Traps
-  [ ] Ejectors
+  [x] Ejectors
   [ ] Bombs
 
 ## V 2.0

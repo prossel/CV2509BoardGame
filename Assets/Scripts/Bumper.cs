@@ -29,6 +29,14 @@ public class Bumper : MonoBehaviour
             Rigidbody ballRigidbody = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 forceDirection = transform.up; // y axis of the bumper
             ballRigidbody.AddForce(forceDirection * forceMagnitude, ForceMode.Impulse);
+
+            // Play sound effect (if any)
+            AudioSource audioSource = GetComponent<AudioSource>();
+            if (audioSource != null)
+            {
+                audioSource.Play();
+            }
+
         }
 
     }
