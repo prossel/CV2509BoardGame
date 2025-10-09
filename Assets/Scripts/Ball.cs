@@ -25,6 +25,21 @@ public class Ball : MonoBehaviour
             // Load next scene in 2 seconds (so that the sound can play)
             Invoke("LoadNextScene", 2f);
         }
+
+        if (collision.gameObject.CompareTag("BallLoss"))
+        {
+            Debug.Log("Ball is lost");
+
+            // Reload current scene in 2 seconds (so that the sound can play)
+            Invoke("ReloadScene", 2f);
+        }
+    }
+
+    private void ReloadScene()
+    {
+        // Load next scene or the first scene if we are at the last scene
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;       
+        SceneManager.LoadScene(currentSceneIndex);
     }
 
     private void LoadNextScene()
@@ -33,8 +48,5 @@ public class Ball : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = (currentSceneIndex + 1) % SceneManager.sceneCountInBuildSettings;
         SceneManager.LoadScene(nextSceneIndex);
-
-        //SceneManager.LoadScene("Level02");
-
     }
 }
