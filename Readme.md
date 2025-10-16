@@ -36,6 +36,7 @@
   [ ] Traps
   [x] Ejectors
   [ ] Bombs
+[ ] Limit number of balls then game over
 
 ## V 2.0
 
