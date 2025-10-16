@@ -3,6 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
+
+    public AudioClip explosionSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,6 +32,26 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.CompareTag("BallLoss"))
         {
             Debug.Log("Ball is lost");
+
+            // Reload current scene in 2 seconds (so that the sound can play)
+            Invoke("ReloadScene", 2f);
+        }
+
+        if (collision.gameObject.CompareTag("DestroyFoe"))
+        {
+            Debug.Log("Ball destroyed by a foe");
+
+            // Disable the renderer and collider
+            GetComponent<Renderer>().enabled = false;
+
+            // set the ball as kinematic so that it stops moving
+            GetComponent<Rigidbody>().isKinematic = true;
+
+            // Play the explosion sound
+            if (explosionSound != null)
+            {
+                AudioSource.PlayClipAtPoint(explosionSound, transform.position);
+            }
 
             // Reload current scene in 2 seconds (so that the sound can play)
             Invoke("ReloadScene", 2f);

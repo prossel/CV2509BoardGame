@@ -19,8 +19,8 @@
 [ ] Add more obstacles
   [x] Add walls
   [ ] Add moving obstacles
-  [ ] Add rotating obstacles
-  [ ] Add sliding obstacles (doors)
+  [x] Add rotating obstacles
+  [x] Add sliding obstacles (doors)
   [ ] Add one-way walls
   [ ] Add teleporters
   [ ] Add more targets to hit in sequence (Susana)
@@ -32,14 +32,14 @@
   [ ] Add a seesaw
   [x] Add a catapult
   [ ] Add a fan
-  [ ] Add a ramp
+  [x] Add a ramp
 [ ] Add foes
   [ ] Chasing foes
   [ ] Random moving foes
   [ ] Traps
   [x] Ejectors
   [ ] Bombs
-  [ ] Spiky thing (kills the ball by Yol)
+  [x] Spiky thing (kills the ball by Yol)
 [ ] Limit number of balls then game over
 
 ## V 2.0
