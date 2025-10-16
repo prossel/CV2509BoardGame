@@ -23,7 +23,10 @@
   [ ] Add sliding obstacles (doors)
   [ ] Add one-way walls
   [ ] Add teleporters
-  [ ] Add a hole
+  [ ] Add more targets to hit in sequence (Susana)
+  [ ] Add an elevator (Jennifer)
+  [ ] Add a hole (Fuonna)
+  [ ] Add a pair of parrallel bars (Antonin)
   [ ] Add an outside path (get out of the board on some tricky place that brings you back to another unreachable place)
   [ ] Add a moving platform
   [ ] Add a seesaw
@@ -36,6 +39,7 @@
   [ ] Traps
   [x] Ejectors
   [ ] Bombs
+  [ ] Spiky thing (kills the ball by Yol)
 [ ] Limit number of balls then game over
 
 ## V 2.0
