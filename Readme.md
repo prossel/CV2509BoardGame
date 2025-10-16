@@ -49,6 +49,6 @@
 [ ] Add more balls
 [ ] Add power-ups
 [ ] Add multiplayer
-[ ] Add restart button
-[ ] Add main menu
+[x] Add restart button
+[x] Add main menu
 [ ] Add lives
