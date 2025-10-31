@@ -23,8 +23,7 @@ public class Board : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Pointer.current != null && rb != null)
         {
@@ -34,7 +33,7 @@ public class Board : MonoBehaviour
 
             // rotate the board around the x axis when the mouse is moved up and down
             // and around the z axis when the mouse is moved left and right
-            float rotationSpeed = 0.1f;
+            float rotationSpeed = 0.05f;
             float rotationX = Pointer.current.delta.y.ReadValue() * rotationSpeed;
             float rotationZ = -Pointer.current.delta.x.ReadValue() * rotationSpeed;
 
