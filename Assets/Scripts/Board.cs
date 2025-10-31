@@ -3,10 +3,12 @@ using UnityEngine.InputSystem;
 
 public class Board : MonoBehaviour
 {
+    private Rigidbody rb;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     void OnEnable()
@@ -24,7 +26,7 @@ public class Board : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Pointer.current != null)
+        if (Pointer.current != null && rb != null)
         {
             // Vector2 pos = Pointer.current.position.ReadValue();
             // Debug.Log("Pointer position: " + pos);
@@ -35,8 +37,24 @@ public class Board : MonoBehaviour
             float rotationSpeed = 0.1f;
             float rotationX = Pointer.current.delta.y.ReadValue() * rotationSpeed;
             float rotationZ = -Pointer.current.delta.x.ReadValue() * rotationSpeed;
-            transform.Rotate(rotationX, 0, rotationZ, Space.World);
 
+            // Apply rotation using Rigidbody for proper physics integration
+            Quaternion deltaRotation = Quaternion.Euler(rotationX, 0, rotationZ);
+            rb.MoveRotation(rb.rotation * deltaRotation);
+
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        // get the collider that was hit on this object
+        Collider hitCollider = collision.contacts[0].thisCollider;
+
+        // if the collider's gameobject is not the board itself, forward the collision to that gameobject
+        if (hitCollider.gameObject != this.gameObject)
+        {
+            // forward the collision to the other gameobject
+            hitCollider.gameObject.SendMessage("OnCollisionEnter", collision, SendMessageOptions.DontRequireReceiver);
         }
     }
 

@@ -17,11 +17,14 @@ public class CollisionSound : MonoBehaviour
     // Detect collision with another object
     private void OnCollisionEnter(Collision collision)
     {
+        // Debug.Log("sound Collision detected with " + collision.gameObject.name, this);
+
         // Check if the object has an AudioSource component
         AudioSource audioSource = GetComponent<AudioSource>();
         if (audioSource != null)
         {
-            // Play the sound
+            // Play the sound with a volume based on the collision relative velocity
+            audioSource.volume = Mathf.Clamp01(collision.relativeVelocity.magnitude / 10f);
             audioSource.Play();
         }
     }        

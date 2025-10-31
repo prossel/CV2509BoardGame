@@ -21,7 +21,9 @@ public class Ball : MonoBehaviour
     // detect collision with the target
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Target"))
+        //Debug.Log("Ball collided with " + collision.gameObject.name + " collider name: " + collision.collider.name + " collision speed: " + collision.relativeVelocity.magnitude);
+
+        if (collision.collider.CompareTag("Target"))
         {
             Debug.Log("Ball hit the target!");
 
@@ -29,7 +31,7 @@ public class Ball : MonoBehaviour
             Invoke("LoadNextScene", 2f);
         }
 
-        if (collision.gameObject.CompareTag("BallLoss"))
+        if (collision.collider.CompareTag("BallLoss"))
         {
             Debug.Log("Ball is lost");
 
@@ -37,7 +39,7 @@ public class Ball : MonoBehaviour
             Invoke("ReloadScene", 2f);
         }
 
-        if (collision.gameObject.CompareTag("DestroyFoe"))
+        if (collision.collider.CompareTag("DestroyFoe"))
         {
             Debug.Log("Ball destroyed by a foe");
 
