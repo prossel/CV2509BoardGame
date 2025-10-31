@@ -33,6 +33,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 06 Rampe sans appui.unity
     guid: ae25b861ba7864e9591f2da5b8c7f976
   - enabled: 1
+    path: Assets/Scenes/Level 07 Porte coulissante.unity
+    guid: 05595148234a24d74ad550ae32bc4de6
+  - enabled: 1
+    path: Assets/Scenes/Level 08 Multi targets.unity
+    guid: 4adc7033e6e5f488d9e079f51301e9d6
+  - enabled: 1
     path: Assets/Scenes/GameEnd.unity
     guid: 5e8ce708a34134b69bd873a1379a0050
   m_configObjects:
