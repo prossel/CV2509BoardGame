@@ -14,7 +14,9 @@
  
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
- 
+
+# Mono auto generated files
+mono_crash.*
  
 /[Mm]emoryCaptures/
 /[Rr]ecordings/
