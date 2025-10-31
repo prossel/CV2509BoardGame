@@ -1,6 +1,16 @@
 # Board Game
 
+![Screenshot](Screenshot.png)
+
 ## Description
+
+A simple 3D board game made with Unity. The player controls a ball that rolls around a board, trying to hit targets and avoid obstacles.
+
+This game has been developed as part of the Applications Interactives course at HEAD-Genève.
+
+The game is a work in progress and will probably never be finished. It has many bugs and is not optimized. It is not intended to be a commercial product. You can however still have fun playing it and testing it.
+
+The current version can be played [here](https://prossel.github.io/CV2509BoardGame/).
 
 ## Ideas for future improvements
 
